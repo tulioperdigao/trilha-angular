@@ -5,23 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PORTAL DE NOTÍCIAS IMPERIAL</title>
     <link rel="stylesheet" href="styles/card.css">
+    <script src="src/components/CardNews.js" defer></script>
+    <script src="src/components/TituloDinamico.js" defer></script>
 </head>
 <body>
-    <div class="container">
-        <div class="card">
-            <div class="card__left">
-                <span>
-                    By Tulio Perdigão
-                </span>
-                <a href="#">Darth Vader está contratando Front-Ends</a>
-                <p>
-                    Darth Vader está procurando desenvolvedores Front-End. É pré-requisito que eles saibam trabalhar com componentização
-                </p>
-            </div>
-            <div class="card__right">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVoMd-_knMEUhVZ8NGfF6H89e-6ELTOAaxrQ&s" alt="Darth Vader mandando um joínha.">
-            </div>
-        </div>
-    </div>
+    <card-news 
+        autor="Tulio"
+        title="Darth Vader Contrata"
+        link-url="www.google.com"
+        content="Darth Vader está procurando desenvolvedores Front-End. É pré-requisito que eles saibam trabalhar com componentização."
+        img-path="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVoMd-_knMEUhVZ8NGfF6H89e-6ELTOAaxrQ&s"
+        img-alt="Jackson"
+    ></card-news>
+    <card-news 
+        title="Yoda vai para o lado sombrio!"
+        link-url="www.google.com"
+        content="Yoda se declara usuário do lado sombrio e choca a República."
+        img-path="https://pm1.aminoapps.com/6819/8edd0e1a4165feac52a0a98886e04f41603a98ebv2_00.jpg"
+        img-alt="Darth Yoda"
+    ></card-news>
+    <card-news 
+        autor="Palpatine"
+        title="Darth Vader é punido!"
+        link-url="www.google.com"
+        content="Darth Vader segue o ciclo natural Sith e tenta matar o imperador e é severamente punido."
+        img-path="https://i.ytimg.com/vi/1VM1w47a1bk/sddefault.jpg"
+        img-alt="Vader ferido"
+    ></card-news>
 </body>
 </html>

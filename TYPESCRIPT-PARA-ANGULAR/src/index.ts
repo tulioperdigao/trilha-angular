@@ -20,7 +20,5 @@ let indefinido: undefined = undefined;
 // void
 
 // Exemplo de função que retorna void
-function retorno(): void {
-  // não retorna nada
-}
+let retorno:void;
 let retornoView: any = false;

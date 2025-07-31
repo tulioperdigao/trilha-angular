@@ -43,3 +43,10 @@ let meuProduto: ProdutoLoja = {
     preco: 70,
     unidades: 5
 }
+
+
+// arrays
+let dados: string[] = ['tulio', 'kaio', 'daniel'];
+let dados2: Array<string> = ['tulio', 'kaio', 'daniel'];
+
+let infos: (string | number)[] = ['tulio', 21, 'kaio', 31];

@@ -59,6 +59,15 @@ let boleto: [string, number, number] = ['Conta de Água', 159.90, 909090];
 // arrays métodos
 dados.pop();
 
-//datas
+// datas
 let aniversario: Date = new Date('2025-07-31 16:37');
 console.log(aniversario.toString());
+
+// funções
+
+function addNumber (x: number, y: number): number {
+    return x + y;
+}
+
+let soma: number = addNumber(5, 6);
+console.log(soma);

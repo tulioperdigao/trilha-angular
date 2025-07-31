@@ -50,3 +50,7 @@ let dados: string[] = ['tulio', 'kaio', 'daniel'];
 let dados2: Array<string> = ['tulio', 'kaio', 'daniel'];
 
 let infos: (string | number)[] = ['tulio', 21, 'kaio', 31];
+
+
+// tuplas
+let boleto: [string, number, number] = ['Conta de Água', 159.90, 909090];

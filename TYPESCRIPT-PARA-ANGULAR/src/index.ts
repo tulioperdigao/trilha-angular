@@ -54,3 +54,11 @@ let infos: (string | number)[] = ['tulio', 21, 'kaio', 31];
 
 // tuplas
 let boleto: [string, number, number] = ['Conta de Água', 159.90, 909090];
+
+
+// arrays métodos
+dados.pop();
+
+//datas
+let aniversario: Date = new Date('2025-07-31 16:37');
+console.log(aniversario.toString());

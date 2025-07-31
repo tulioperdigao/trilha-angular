@@ -22,3 +22,24 @@ let indefinido: undefined = undefined;
 // Exemplo de função que retorna void
 let retorno:void;
 let retornoView: any = false;
+
+
+// objeto - sem previsibilidade
+let produto: object = {
+    name: 'tulio',
+    cidade: 'sp',
+    idade: 21
+}
+
+// objeto - com previsibilidade
+type ProdutoLoja = {
+    nome: string;
+    preco: number;
+    unidades: number;
+}
+
+let meuProduto: ProdutoLoja = {
+    nome: 'controle',
+    preco: 70,
+    unidades: 5
+}

@@ -1,6 +1,14 @@
 // classes -> forma / molde
+
+/*
+    data modifiers
+    public -> todos veem
+    private -> somente a classe vê
+    protected -> classes e subclasses que herdem suas propriedades
+*/
+
 class Character {
-    name: string
+    private name?: string
     strength: number
     skill: number
 

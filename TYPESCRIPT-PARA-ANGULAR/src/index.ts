@@ -1,11 +1,13 @@
 // decorators
 
-function exibirNome(target: any) {
-    console.log(target);
+function apiVersion(version: string) {
+    return (target: any) => {
+        Object.assign(target.prototype, {__version: version});
+    }
 }
 
-@exibirNome
-class Funcionario {}
+@apiVersion('1.10')
+class Api {};
 
-@exibirNome
-class Quincas {}
+const api = new Api();
+console.log(api.__version)

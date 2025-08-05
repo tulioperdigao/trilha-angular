@@ -1,44 +1,11 @@
-// classes -> forma / molde
+// generics
 
-/*
-    data modifiers
-    public -> todos veem
-    private -> somente a classe vê
-    protected -> classes e subclasses que herdem suas propriedades
-*/
-
-
-// Character -> superclass / pai
-class Character {
-    protected name?: string
-    strength: number
-    skill: number
-
-    constructor(name: string, strength: number, skill:number) {
-        this.name = name;
-        this.strength = strength;
-        this.skill = skill;
-    }
-
-    attack(): void {
-        console.log(`Attack with ${this.strength} points`);
-    }
+function concatArray<T>(...itens: T[]):T[] {
+    return new Array().concat(...itens);
 }
 
-// Magician -> subclass / Filha
-class Magician extends Character {
-    magicPoints: number;
+const numArray = concatArray(<number[]>[1,5], [3]);
+const stringArray = concatArray(<string[]>['tulio', 'kaio'], ['vegeta']);
 
-    constructor(
-        name: string, 
-        strength: number, 
-        skill: number, 
-        magicPoints: number
-    ) {
-        super(name, strength, skill);
-        this.magicPoints = magicPoints;
-    }
-}
-
-const p1 = new Character('Ryu', 10, 98);
-const p2 = new Magician('Wizard', 9, 30, 99);
+console.log(numArray);
+console.log(stringArray);

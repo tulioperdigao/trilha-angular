@@ -1,13 +1,41 @@
 // decorators
 
+// class decorator
 function apiVersion(version: string) {
     return (target: any) => {
-        Object.assign(target.prototype, {__version: version});
+        Object.assign(target.prototype, {__version: '1.10'});
     }
 }
 
-@apiVersion('1.10')
-class Api {};
+// attribute decorator
+function minLength (length: number) {
+    return (target: any, key: string) => {
+        let _value = (target[key]);
 
-const api = new Api();
-console.log(api.__version)
+        const getter = () => _value;
+        const setter = (value:string) => {
+            if (value.length < length) {
+                throw new Error(`Tamanho menor do que ${length}`);
+            } else {
+                _value = value
+            }
+        };
+
+        Object.defineProperty(target, key, {
+            get: getter,
+            set: setter
+        });
+    }
+}
+
+class Api {
+    @minLength(10)
+    name: string;
+
+    constructor(name: string) {
+        this.name = name;
+    }
+}
+
+const api = new Api('paralelepipedo');
+console.log(api.name)

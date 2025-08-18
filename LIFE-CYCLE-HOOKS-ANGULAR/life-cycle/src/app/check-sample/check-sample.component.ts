@@ -5,7 +5,8 @@ import {
   AfterContentInit,
   AfterContentChecked,
   AfterViewChecked,
-  AfterViewInit
+  AfterViewInit,
+  OnDestroy
 } from '@angular/core';
 
 @Component({
@@ -19,7 +20,8 @@ DoCheck,
 AfterContentInit,
 AfterContentChecked,
 AfterViewChecked,
-AfterViewInit {
+AfterViewInit,
+OnDestroy {
 
   quantidade:number = 0;
 
@@ -60,6 +62,10 @@ AfterViewInit {
 
   ngOnInit(): void {
     console.log('ngDoInit')
+  }
+
+  ngOnDestroy(): void {
+    console.log('Adeus, meu caro amigo...');
   }
 
 }

@@ -1,10 +1,20 @@
 <div>
   <ul>
     <li>
-      <a [routerLink]="['/']">Home</a>
+      <a
+        [routerLink]="['/']"
+        [routerLinkActive]="['activated']"
+        [routerLinkActiveOptions]="{exact: true}">
+        Home
+      </a>
     </li>
     <li>
-      <a [routerLink]="['/portfolio']">Portfolio</a>
+      <a
+        [routerLink]="['/portfolio']"
+        [routerLinkActive]="['activated']"
+        [routerLinkActiveOptions]="{exact: true}">
+        Portfolio
+      </a>
     </li>
   </ul>
 </div>

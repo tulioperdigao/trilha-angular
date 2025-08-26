@@ -14,7 +14,7 @@ export class CardComponent implements OnInit {
   ) {
 
     // http://localhost:4200/portfolio/{1}
-    this.parametrizador.params.subscribe(
+    this.parametrizador.firstChild?.params.subscribe(
       res => console.log(res)
     )
 

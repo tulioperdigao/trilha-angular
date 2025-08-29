@@ -20,6 +20,14 @@
   width: 90%;
   height: 70%;
   margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card__body > img {
+  width: 100%;
 }
 
 .card__stats {

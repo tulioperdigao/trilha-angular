@@ -12,6 +12,7 @@
 
 .card__title > h3 {
   color: white;
+  text-transform: capitalize;
 }
 
 .card__body {
